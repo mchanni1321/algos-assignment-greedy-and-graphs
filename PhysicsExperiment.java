@@ -38,6 +38,29 @@ public class PhysicsExperiment {
     int[][] scheduleTable = new int[numStudents + 1][numSteps + 1];
 
     // Your code goes here
+        // initialize current student and current step
+    int currentStudent = 1;
+    int currentSteps = 0;
+    int max = 0;
+    
+    while (true) {
+    	// Iterate through all the students and all of the steps
+    	for (int i = 1; i <= numStudents; i++) {
+    		for (int j = currentSteps + 1; j <= numSteps; j++) {
+    			if (signUpTable[i][j] == 0) {
+    				break;
+    			}
+    			else if (signUpTable[i][j] == 1){
+    				numSteps++;
+    			}
+    		}
+    		if (currentSteps > max) {
+    			currentSteps = max;
+    			currentStudent = i;
+    		}
+    	}
+    	  return scheduleTable;
+    }
 
     return scheduleTable;
   }
