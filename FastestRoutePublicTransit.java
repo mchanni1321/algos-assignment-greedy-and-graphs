@@ -34,6 +34,15 @@ public class FastestRoutePublicTransit {
   ) {
     // Your code along with comments here. Feel free to borrow code from any
     // of the existing method. You can also make new helper methods.
+    
+    	
+	/* Approach for solving problem:
+	 * Store the possible waiting time for next train in some type of data structure
+	 * Possible data structure would be an ArrayList
+	 * Modify Dijkstra's Algorithm by using a Fibonacci heap in order to 
+	 * optimize solution
+	 * 
+	 */
     return 0;
   }
 
@@ -125,5 +134,16 @@ public class FastestRoutePublicTransit {
     t.shortestTime(lengthTimeGraph, 0);
 
     // You can create a test case for your implemented method for extra credit below
+        int first[][] = new int[][] { 
+    		{0, 4, 0, 0, 0, 8, 0, 2, 9},
+    		{4, 0, 2, 9, 2, 8, 2, 0,10},
+    		{9, 8, 1, 0, 5, 7, 4, 0,0},
+    		{6, 4, 2, 3, 0, 8, 2, 7,9},
+    		{4, 1, 2, 9, 2, 5, 1, 0,10},
+    		{12, 0, 2, 9, 2, 8, 2, 0,4},
+    		{4, 0, 2, 10, 2, 5, 0, 3,12},
+    		{10, 7, 3, 9, 3, 8, 15, 0,10},
+    		{7, 0, 2, 9, 2, 8, 2, 14,0}};
+  }
   }
 }
